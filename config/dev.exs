@@ -4,8 +4,8 @@ import Config
 config :real_time_auction, RealTimeAuction.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
-  database: "real_time_auction_dev",
+  database: "live_dash_board_dev",
+  hostname: "xr-cloud-dev-db-1.c4vwndoqrlgr.ap-northeast-2.rds.amazonaws.com",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -23,11 +23,7 @@ config :real_time_auction, RealTimeAuctionWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "jODUuuLUEdYAPaxPSFxack3mutCCIVsT7nMk8RFyVROZDC8BJowmPms8794mCaZP",
-  watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
-  ]
+  secret_key_base: "jODUuuLUEdYAPaxPSFxack3mutCCIVsT7nMk8RFyVROZDC8BJowmPms8794mCaZP"
 
 # ## SSL Support
 #

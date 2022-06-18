@@ -32,3 +32,4 @@ real_time_auction-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/priv/static
