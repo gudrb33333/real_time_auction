@@ -39,6 +39,12 @@ defmodule RealTimeAuctionWeb.Router do
       pipe_through :browser
 
       live_dashboard "/dashboard", metrics: RealTimeAuctionWeb.Telemetry
+      live "/posts", RealTimeAuctionWeb.PostLive.Index, :index
+      live "/posts/new", RealTimeAuctionWeb.PostLive.Index, :new
+      live "/posts/:id/edit", RealTimeAuctionWeb.PostLive.Index, :edit
+
+      live "/posts/:id", RealTimeAuctionWeb.PostLive.Show, :show
+      live "/posts/:id/show/edit", RealTimeAuctionWeb.PostLive.Show, :edit
     end
   end
 
