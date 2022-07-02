@@ -18,6 +18,7 @@ defmodule RealTimeAuctionWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/health", PageController, :health
   end
 
   # Other scopes may use custom stacks.
