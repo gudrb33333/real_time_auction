@@ -13,7 +13,7 @@ defmodule RealTimeAuction.Application do
       # Start the Telemetry supervisor
       RealTimeAuctionWeb.Telemetry,
       # Start the PubSub system
-      {Phoenix.PubSub, name: RealTimeAuction.PubSub},
+      {Phoenix.PubSub, [name: RealTimeAuction.PubSub, adapter: Phoenix.PubSub.PG2]},
       # Start the Endpoint (http/https)
       RealTimeAuctionWeb.Endpoint
       # Start a worker by calling: RealTimeAuction.Worker.start_link(arg)
